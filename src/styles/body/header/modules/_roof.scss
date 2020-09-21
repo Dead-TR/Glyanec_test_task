@@ -1,0 +1,171 @@
+$drop-color: white;
+
+.roof {
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__data {
+  }
+
+  &__data-text {
+    max-width: 375px;
+    text-align: center;
+    @include fonts-style("Open Sans", normal, 1.15rem, normal, 120%, #3A4047);
+
+    &_bold {
+      @include fonts-style("Open Sans", bold, 1rem, normal, 200%, #3A4047);
+    }
+  }
+
+  &__services {
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "cabinet mail bucket"
+    "social phone bucket";
+    justify-items: end;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+  &__item {
+
+    &_cabinet {
+      grid-area: cabinet;
+    }
+
+    &_mail {
+      grid-area: mail;
+    }
+
+    &_social {
+      grid-area: social;
+    }
+
+    &_phone {
+      grid-area: phone;
+      display: flex;
+      position: relative;
+    }
+
+    &_bucket {
+      justify-self: start;
+      grid-area: bucket;
+    }
+  }
+
+  &__text {
+    @include fonts-style("Open Sans", normal, 1rem, normal, 120%, #3A4047);
+
+    &_user {
+      text-decoration: underline;
+    }
+
+    &_phone {
+      font-weight: bold;
+      font-size: 1.15rem;
+      margin: 0 5px 0 10px;
+    }
+  }
+
+  &__user-logo {
+    max-width: 13px;
+    max-height: 12px;
+  }
+
+  &__arrow-box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #EDEDED;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: transform 1s;
+
+    &_active {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__arrow-item {
+    @include fonts-style("Concert One", bold, 1.5rem, normal, 120%, #3A4047);
+    transform: translateY(-3px);
+  }
+
+  &__drop-list {
+    width: 220px;
+    background: $drop-color;
+    position: absolute;
+    top: 40px;
+    right: -15px;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.35);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+
+    &_active {
+      max-height: 300px;
+    }
+  }
+
+  &__drop-rectangle {
+    position: absolute;
+    z-index: 3;
+    // background: $drop-color;
+    // background: red;
+    // width: 28px;
+    // height: 28px;
+    // transform: rotate(-45deg);
+    right: -10px;
+    top: 25px;
+    // max-height: 0;
+    transition: border 5s;
+
+    width: 0;
+    height: 0;
+    border-bottom: 0px solid $drop-color;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    &_active {
+      border-bottom: 20px solid $drop-color;
+      transition: border 0.1s;
+    }
+  }
+
+  &__drop-item {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__drop-img {
+    max-height: 25px;
+    max-width: 25px;
+    margin-right: 10px;
+  }
+
+  &__drop-number {
+    @include fonts-style("Open Sans", normal, 1.15rem, normal, 120%, #3A4047);
+  }
+}

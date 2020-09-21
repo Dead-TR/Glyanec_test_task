@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -363,4 +364,8 @@ textarea {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+a {
+    text-decoration: none;
 }
