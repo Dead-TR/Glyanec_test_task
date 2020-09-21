@@ -1,0 +1,14 @@
+@mixin fonts-style($f-family, $f-weight, $f-size, $f-style, $l-height, $color) {
+  font-family: $f-family, "Roboto", Arial, sans-serif;
+  font-weight: $f-weight;
+  font-size: $f-size;
+  color: $color;
+  font-style: $f-style;
+  line-height: $l-height;
+}
+
+@mixin fonts-compact($f-weight, $f-size, $l-height) {
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $l-height;
+}
