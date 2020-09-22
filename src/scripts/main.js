@@ -6,7 +6,6 @@ dropArrow.addEventListener('click', (event) => {
   if (event.target.closest('.roof__arrow-box')) {
     const dropMenu = document.querySelector('.roof__drop-list');
     const dropRectangle = document.querySelector('.roof__drop-rectangle');
-    // console.log("event", event.target)
 
     if (dropArrow.classList.contains('roof__arrow-box_active')) {
       dropArrow.classList.remove('roof__arrow-box_active');
@@ -20,3 +19,16 @@ dropArrow.addEventListener('click', (event) => {
     }
   }
 });
+
+const navSearchIco = document.querySelector('.navigation__search-icon');
+
+navSearchIco.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  const navSearchWrap = document.querySelector('.navigation__search-wrapper');
+
+  (navSearchWrap.classList.contains('navigation__search-wrapper_active'))
+    ? navSearchWrap.classList.remove('navigation__search-wrapper_active')
+    : navSearchWrap.classList.add('navigation__search-wrapper_active');
+
+})

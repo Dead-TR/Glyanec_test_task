@@ -1,0 +1,13 @@
+.about {
+
+  &__title {
+    @include fonts-style("Open Sans", normal, 2rem, normal, 120%, #3A4047);
+    text-align: center;
+    margin: 15px 0 35px;
+  }
+
+  &__text {
+    @include fonts-style("Open Sans", normal, 1rem, normal, 120%, #3A4047);
+    padding: 0 10px;
+  }
+}

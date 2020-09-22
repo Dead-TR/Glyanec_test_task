@@ -31,7 +31,6 @@
           <div class="roof__services">
             <ul class="roof__list">
               <li class="roof__item roof__item_cabinet">
-                <!-- кабінет -->
                 <img
                   src="./images/header/roof/user.svg"
                   alt="user"
@@ -41,21 +40,20 @@
                   Личный кабинет
                 </a>
               </li>
+
               <li class="roof__item roof__item_mail">
-                <!-- пошта -->
                 <a href="#" class="roof__text roof__text_mail">
                   maket@test-vertka.ua
                 </a>
               </li>
+
               <li class="roof__item roof__item_social">
-                <!-- соцмережі -->
                 <a href="#">
                   <img src="./images/header/roof/facebook.svg" alt="facebook">
                 </a>
               </li>
 
               <li class="roof__item roof__item_phone">
-                <!-- телефон -->
                 <img src="./images/header/roof/phone.svg" alt="">
                 <a href="tel:0443314042" class="roof__text roof__text_phone">
                   (044) 331-40-42
@@ -109,9 +107,9 @@
               </li>
 
               <li class="roof__item roof__item_bucket">
-                <!-- корзина -->
                 <a href="">
                   <img src="./images/header/roof/shopping-cart.svg" alt="shopping-cart">
+                  <div class="roof__item_shop-num">3</div>
                 </a>
               </li>
             </ul>
@@ -121,28 +119,60 @@
       <nav class="header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              Главная
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              Продукция
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              Доставка и оплата
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              Новости
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              База знаний
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              О нас
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__text">
+              Контакты
+            </a>
           </li>
+
           <li class="navigation__item">
-            <a href=""></a>
+            <a href="" class="navigation__search-icon">
+              <img src="./images/header/navigation/search.svg" alt="">
+            </a>
+
+            <div class="navigation__search-wrapper">
+              <input
+                type="text"
+                name="search"
+                id="nav-search"
+                class="navigation__search-input"
+              >
+            </div>
           </li>
         </ul>
       </nav>
@@ -150,33 +180,143 @@
 
     <main class="main">
       <section class="main__banner banner">
-        <h1 class="banner__title"></h1>
-        <div class="banner__line"></div>
-        <p class="banner__text"></p>
-        <button class="banner__button"></button>
-        <div class="banner__promo"></div>
+        <div class="banner__wrapper">
+          <h1 class="banner__title">
+            Оперативная печать полиграфии от 1 дня!
+          </h1>
+          <div class="banner__line"></div>
+          <p class="banner__text">
+            Доставка в любой город Украины
+          </p>
+          <button class="banner__button">
+            Сделать заказа
+          </button>
+          <div class="main__promo promo"></div>
+        </div>
       </section>
 
       <section class="main__product product">
-        <h1 class="main__title"></h1>
+        <h1 class="main__title">
+          Продукция
+        </h1>
         <div class="product__cards">
-          <div class="product__card card card_product">
+          <div class="product__card">
+            <img
+              src="/images/main/product/blank-page.svg"
+              alt="office"
+              class="product__img"
+            >
+            <div class="product__content">
+              <h1 class="product__title">Офисная продукция</h1>
+              <div class="product__elements">
+                <div class="product__box">
+                  <p class="product__element">Визитки</p>
+                  <p class="product__element">Конверты</p>
+                  <p class="product__element">Папки</p>
+                  <p class="product__element">Книги</p>
+                  <p class="product__element">Блокноты</p>
+                  <p class="product__element">Фирменные бланки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__card">
+            <img
+              src="/images/main/product/road-map.svg"
+              alt="office"
+              class="product__img"
+            >
+            <div class="product__content">
+              <h1 class="product__title">Рекламная продукция</h1>
+              <div class="product__elements">
+                <div class="product__box">
+                  <p class="product__element">Листовки</p>
+                  <p class="product__element">Флаера</p>
+                  <p class="product__element">Буклеты</p>
+                  <p class="product__element">Календари</p>
+                  <p class="product__element">Блокноты</p>
+                </div>
+                <div class="product__box">
+                  <p class="product__element">Плакаты</p>
+                  <p class="product__element">Баннеры</p>
+                  <p class="product__element">Магниты</p>
+                  <p class="product__element">Наклейки</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product__card">
+            <img
+              src="/images/main/product/e-reader.svg"
+              alt="office"
+              class="product__img"
+            >
+            <div class="product__content">
+              <h1 class="product__title">Для бизнеса</h1>
+              <div class="product__elements">
+                <div class="product__box">
+                  <p class="product__element">Каталоги</p>
+                  <p class="product__element">Журналы</p>
+                  <p class="product__element">Дисконтные карты</p>
+                  <p class="product__element">Бейджи</p>
+                  <p class="product__element">Гарантиныйные наклейки</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="main__about about">
-        <h1 class="main__title"></h1>
-        <h1 class="about__title"></h1>
-        <p class="about__text"></p>
+        <h1 class="main__title">
+          О нас
+        </h1>
+        <h1 class="about__title">
+          Оперативная печать полиграфии от 1 дня!
+        </h1>
+        <p class="about__text">
+          Перед долгим заплывом намажьтесь солнцезащитным кремом. Вода не спасает от вредного излучения, оно проникает и на глубину 1 м.
+          Прежде чем отправиться на пляж, съешьте что-нибудь солененькое или выпейте чай с лимоном. Считается, что тем самым вы предотвратите потерю важных минеральных веществ, которые покидают тело вместе с потом, а загар при этом ляжет ровнее. Находясь на солнце, следует больше двигаться — плавать, делать гимнастику, играть в мяч и т.д. Лучше ходить босиком, чем в тапочках. Не рекомендуется покрывать ногти лаком, пусть они отдохнут и получат солнечные лучи и воздух.
+        </p>
       </section>
 
+      <div class="main__line"></div>
+
       <section class="main__news news">
-        <h1 class="main__title"></h1>
-        <div class=" news__cards">
-          <div class="card card_news">
+        <h1 class="main__title">
+          Новости
+        </h1>
+        <div class="news__cards">
+          <div class="news__card">
+            <p class="news__date">
+              14 марта 2018
+            </p>
+            <p class="news__text">
+              Оазисное земледелие поднимает культурный субэкваториальный климат, там же можно с палками
+            </p>
+          </div>
+          <div class="news__card">
+            <p class="news__date">
+              14 марта 2018
+            </p>
+            <p class="news__text">
+              Оазисное земледелие поднимает культурный субэкваториальный климат, там же можно с палками
+            </p>
+          </div>
+          <div class="news__card">
+            <p class="news__date">
+              14 марта 2018
+            </p>
+            <p class="news__text">
+              Оазисное земледелие поднимает культурный субэкваториальный климат, там же можно с палками
+            </p>
           </div>
         </div>
+        <button class="news__button">
+          Смотреть все новости
+        </button>
       </section>
     </main>
 

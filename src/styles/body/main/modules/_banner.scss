@@ -1,0 +1,52 @@
+.banner {
+  background: url("/images/main/banner/banner.jpg") no-repeat 50% 70%;
+  background-size: cover;
+  position: relative;
+
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #00000099;
+  }
+
+  &__title {
+    @include fonts-style("Open Sans", bold, 4rem, normal, 120%, white);
+    text-align: center;
+  }
+
+  &__line {
+    margin-top: 10px;
+    height: 2px;
+    width: 150px;
+    background: white;
+  }
+
+  &__text {
+    @include fonts-style("Open Sans", normal, 2rem, normal, 200%, white);
+    text-align: center;
+  }
+
+  &__button {
+    @include fonts-style("Open Sans", normal, 1.15rem, normal, 100%, white);
+    margin-top: 20px;
+    background: #1AB0CE;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 20px 15px;
+    transition: transform 1s, box-shadow 1s, background 1s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 1px 3px 5px 0px #00000080;
+      background: #0ac2e7;
+    }
+  }
+}

@@ -1,8 +1,12 @@
 @import "./modules/roof";
+@import "./modules/navigation";
 
 .header {
   &__roof {
     width: 100%;
   }
 
+  &__navigation {
+
+  }
 }

@@ -32,7 +32,7 @@ $drop-color: white;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 2fr) 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
     "cabinet mail bucket"
@@ -63,8 +63,23 @@ $drop-color: white;
     }
 
     &_bucket {
-      justify-self: start;
+      justify-self: center;
       grid-area: bucket;
+      position: relative;
+    }
+
+    &_shop-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      background: #1AB0CE;
+      @include fonts-style("Open Sans", normal, 1rem, normal, 120%, white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -10px;
+      right: -15px;
     }
   }
 
@@ -114,6 +129,7 @@ $drop-color: white;
     width: 220px;
     background: $drop-color;
     position: absolute;
+    z-index: 4;
     top: 40px;
     right: -15px;
     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.35);
@@ -128,15 +144,9 @@ $drop-color: white;
 
   &__drop-rectangle {
     position: absolute;
-    z-index: 3;
-    // background: $drop-color;
-    // background: red;
-    // width: 28px;
-    // height: 28px;
-    // transform: rotate(-45deg);
+    z-index: 5;
     right: -10px;
     top: 25px;
-    // max-height: 0;
     transition: border 5s;
 
     width: 0;
