@@ -1,0 +1,112 @@
+.basement-contact {
+  display: flex;
+
+  &__phone {
+    position: relative;
+    margin-left: 25px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__phone-text {
+    font-size: 1.15rem;
+    margin: 0 5px 0 10px;
+    @include fonts-style("Open Sans", bold, 1rem, normal, 120%, #3A4047);
+    transition: color 0.5s;
+
+    &:hover {
+      color: #1AB0CE;
+    }
+  }
+
+  &__arrow-box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+
+    &_active {
+      transform: rotate(-90deg);
+    }
+
+    &:hover {
+
+      & .basement-contact__arrow-item {
+        color: #1AB0CE;
+      }
+    }
+  }
+
+  &__arrow-item {
+    @include fonts-style("Concert One", bold, 1.5rem, normal, 120%, #3A4047);
+    transform: translateY(-3px);
+    transition: color 0.5s;
+  }
+
+  &__drop-rectangle {
+    position: absolute;
+    z-index: 5;
+    right: -8px;
+    top: -30px;
+    transform: rotate(180deg);
+    transition: border 0.5s;
+
+    width: 0;
+    height: 0;
+    border-bottom: 0px solid $drop-color;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    &_active {
+      border-bottom: 20px solid $drop-color;
+      transition: border 0.1s;
+    }
+  }
+
+  &__drop-list {
+    width: 220px;
+    background: $drop-color;
+    position: absolute;
+    z-index: 4;
+    top: -180px;
+    right: -15px;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.35);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+    &_active {
+      max-height: 300px;
+    }
+  }
+
+  &__drop-item {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__drop-img {
+    max-height: 25px;
+    max-width: 25px;
+    margin-right: 10px;
+  }
+
+  &__drop-number {
+    @include fonts-style("Open Sans", normal, 1.15rem, normal, 120%, #3A4047);
+    transition: color 0.5s;
+
+    &:hover {
+      color: #1AB0CE;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "./modules/basement-nav";
+@import "./modules/basement-contact";
+
+.footer {
+  padding: 20px 0 30px;
+  background: #F7F7F7;
+
+  &__phone {
+    display: flex;
+    position: relative;
+  }
+
+  &__time,
+  &__service {
+    @include fonts-style("Open Sans", normal, 1rem, normal, 150%, #3A4047);
+  }
+
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 15px;
+    grid-template-areas:
+    "logo text navigation contact"
+    "service time navigation promo";
+  }
+
+  &__service,
+  &__time,
+  &__promo {
+    align-self: end;
+  }
+
+  &__data-text {
+    @include fonts-style("Roboto", normal, 1rem, normal, 120%, #3A4047);
+    grid-area: text;
+  }
+
+  &__logo {
+    grid-area: logo;
+    max-width: 258px;
+    max-height: 77px;
+  }
+
+  &__service {
+    grid-area: service;
+  }
+
+  &__time {
+    grid-area: time;
+  }
+
+  &__basement-nav {
+    grid-area: navigation;
+  }
+
+  &__basement-contact {
+    grid-area: contact;
+  }
+
+  &__promo {
+    grid-area: promo;
+    display: flex;
+    align-items: center;
+  }
+
+  &__promo-logo {
+    max-width: 17px;
+    max-height: 17px;
+  }
+
+  &__promo-text {
+    @include fonts-style("Cuprum", normal, 0.8rem, normal, 120%, #3A4047);
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,24 @@
+.basement-nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__element {
+
+  }
+
+  &__item {
+    @include fonts-style("Roboto", normal, 1rem, normal, 150%, #3A4047);
+    text-decoration: underline;
+    transition: color 0.5s;
+
+    &:hover {
+      color: #1AB0CE;
+    }
+  }
+}

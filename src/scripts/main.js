@@ -1,8 +1,9 @@
 'use strict';
 
 const dropArrow = document.querySelector('.roof__arrow-box');
+const dropArrowDown = document.querySelector('.basement-contact__arrow-box');
 
-dropArrow.addEventListener('click', (event) => {
+const arrow = (event) => {
   if (event.target.closest('.roof__arrow-box')) {
     const dropMenu = document.querySelector('.roof__drop-list');
     const dropRectangle = document.querySelector('.roof__drop-rectangle');
@@ -18,7 +19,26 @@ dropArrow.addEventListener('click', (event) => {
       dropRectangle.classList.add('roof__drop-rectangle_active');
     }
   }
-});
+
+  else if (event.target.closest('.basement-contact__arrow-box')) {
+    const dropMenu = document.querySelector('.basement-contact__drop-list');
+    const dropRectangle = document.querySelector('.basement-contact__drop-rectangle');
+
+    if (dropArrowDown.classList.contains('basement-contact__arrow-box_active')) {
+      dropArrowDown.classList.remove('basement-contact__arrow-box_active');
+      dropMenu.classList.remove('basement-contact__drop-list_active');
+      dropRectangle.classList.remove('basement-contact__drop-rectangle_active');
+    }
+    else {
+      dropArrowDown.classList.add('basement-contact__arrow-box_active');
+      dropMenu.classList.add('basement-contact__drop-list_active');
+      dropRectangle.classList.add('basement-contact__drop-rectangle_active');
+    }
+  }
+}
+
+dropArrow.addEventListener('click', arrow);
+dropArrowDown.addEventListener('click', arrow);
 
 const navSearchIco = document.querySelector('.navigation__search-icon');
 
@@ -26,9 +46,14 @@ navSearchIco.addEventListener('click', (event) => {
   event.preventDefault();
 
   const navSearchWrap = document.querySelector('.navigation__search-wrapper');
+  const navSearchInput = document.querySelector('.navigation__search-input');
 
-  (navSearchWrap.classList.contains('navigation__search-wrapper_active'))
-    ? navSearchWrap.classList.remove('navigation__search-wrapper_active')
-    : navSearchWrap.classList.add('navigation__search-wrapper_active');
-
+  if (navSearchWrap.classList.contains('navigation__search-wrapper_active')) {
+    navSearchWrap.classList.remove('navigation__search-wrapper_active');
+    navSearchInput.classList.remove('navigation__search-input_active');
+  }
+  else {
+    navSearchWrap.classList.add('navigation__search-wrapper_active');
+    navSearchInput.classList.add('navigation__search-input_active');
+  }
 })
