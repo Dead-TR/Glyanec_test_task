@@ -2,3 +2,9 @@ html {
   font-family: "Open Sans", "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
 }
+
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+}

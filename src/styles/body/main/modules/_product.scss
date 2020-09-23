@@ -40,18 +40,19 @@
   &__title {
     @include fonts-style("Open Sans", bold, 1.15rem, normal, 120%, #3A4047);
     text-transform: uppercase;
-    margin-bottom: 25px;
   }
 
   &__elements {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__box {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
+    margin-top: 25px;
 
     & :last-child {
       margin-bottom: 0;
@@ -61,5 +62,17 @@
   &__element {
     @include fonts-style("Open Sans", normal, 1rem, normal, 120%, #3A4047);
     margin-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .product {
+    &__card {
+      max-width: 85%;
+    }
+
+    &__box {
+      margin-right: 0;
+    }
   }
 }

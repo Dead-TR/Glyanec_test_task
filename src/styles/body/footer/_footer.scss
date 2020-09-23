@@ -77,3 +77,39 @@
     text-transform: uppercase;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 15px;
+      grid-template-areas:
+      "logo contact"
+      "service promo";
+      justify-items: center;
+      align-items: center;
+    }
+
+    &__basement-nav,
+    &__time,
+    &__data-text {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .footer {
+    &__content {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "logo"
+      "contact"
+      "promo"
+      "service";
+      justify-items: center;
+      align-items: center;
+    }
+  }
+}

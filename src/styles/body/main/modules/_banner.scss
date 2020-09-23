@@ -3,8 +3,6 @@
   background-size: cover;
   position: relative;
 
-
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -15,6 +13,7 @@
     height: 100%;
     width: 100%;
     background: #00000099;
+    padding: 20px;
   }
 
   &__title {
@@ -30,7 +29,8 @@
   }
 
   &__text {
-    @include fonts-style("Open Sans", normal, 2rem, normal, 200%, white);
+    @include fonts-style("Open Sans", normal, 2rem, normal, 120%, white);
+    margin-top: 30px;
     text-align: center;
   }
 
@@ -47,6 +47,18 @@
       transform: scale(1.1);
       box-shadow: 1px 3px 5px 0px #00000080;
       background: #0ac2e7;
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .banner {
+    &__title  {
+      font-size: 3rem;
+    }
+
+    &__text {
+
     }
   }
 }

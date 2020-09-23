@@ -56,4 +56,20 @@ navSearchIco.addEventListener('click', (event) => {
     navSearchWrap.classList.add('navigation__search-wrapper_active');
     navSearchInput.classList.add('navigation__search-input_active');
   }
+});
+
+const headerMenu = document.querySelector('.header__menu');
+
+headerMenu.addEventListener('click', (event) => {
+  const navigationMenu = document.querySelector('.navigation');
+
+  if (headerMenu.classList.contains('header__menu_active')) {
+    headerMenu.classList.remove('header__menu_active');
+    navigationMenu.classList.remove('navigation_active');
+
+  }
+  else {
+    headerMenu.classList.add('header__menu_active');
+    navigationMenu.classList.add('navigation_active');
+  }
 })
