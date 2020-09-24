@@ -16,10 +16,6 @@
     max-height: 75px;
   }
 
-  &__data {
-
-  }
-
   &__data-text {
     max-width: 375px;
     text-align: center;
@@ -28,10 +24,6 @@
     &_bold {
       @include fonts-style("Open Sans", bold, 1rem, normal, 200%, #3A4047);
     }
-  }
-
-  &__services {
-
   }
 
   &__list {
@@ -72,6 +64,11 @@
       justify-self: center;
       grid-area: bucket;
       position: relative;
+      transition: transform 1s;
+
+      &:hover{
+        transform: scale(1.1);
+      }
     }
 
     &_shop-num {
@@ -238,11 +235,6 @@
 
 @media only screen and (max-width: 550px) {
   .roof {
-
-    &__content {
-      // position: relative;
-      // padding: 10px;
-    }
 
     &__list {
       grid-template-columns: 1fr;

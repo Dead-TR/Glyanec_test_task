@@ -8,10 +8,6 @@
     justify-content: space-between;
   }
 
-  &__element {
-
-  }
-
   &__item {
     @include fonts-style("Roboto", normal, 1rem, normal, 150%, #3A4047);
     text-decoration: underline;
