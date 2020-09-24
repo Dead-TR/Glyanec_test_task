@@ -1044,7 +1044,7 @@ html {
     transition: transform 1s, max-width 1s, background 1s, -webkit-transform 1s; } }
 
 .banner {
-  background: url("/images/main/banner/banner.jpg") no-repeat 50% 70%;
+  background: url("../images/main/banner/banner.jpg") no-repeat 50% 70%;
   background-size: cover;
   position: relative; }
   .banner__wrapper {
